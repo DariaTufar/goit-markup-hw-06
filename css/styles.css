@@ -800,7 +800,7 @@ section {
     letter-spacing: 0.03em;
     color: var(--primary-text-color);
 }
-
+/* ---------------------форма  заказать с index----------- */
 .backdrop-order{
     position: fixed;
     top: 0;
@@ -857,27 +857,23 @@ section {
     padding: 40px;
 }
 .modal-form-field{
-    /* position: relative; */
     display: flex; 
     flex-direction: column; 
     margin-bottom: 10px;
+    resize: none;
+    width: 100%;
 }
 
 .modal-title{
     font-family: var(--main-font);
-    font-style: normal;
     font-weight: 700;
     font-size: 20px;
     line-height: calc(23/20);
     text-align: center;
     letter-spacing: 0.03em;
-    color: #212121;
+    color: var(--title-text-color);
     background-color: transparent;
     margin-bottom: 12px;
-}
-
-.modal-label{
-    /* position: relative; */
 }
 
 .modal-input{
@@ -888,8 +884,20 @@ section {
     width: 100%;
     min-height: 40px;
     padding-left: 42px;
+    box-sizing: border-box;
 }
 
+.modal-input:focus + .modal-form-icon{
+    fill: var(--accent-color);
+}
+.modal-input:focus{
+    outline: none;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+     0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+      border: 1px solid var(--accent-color);
+}
 
 .modal-label{
     font-family: 'Roboto';
@@ -906,8 +914,6 @@ section {
     position: relative;
 }
 
-
-
 .modal-form-icon{
     color: var(--title-text-color);
     fill:  var(--title-text-color);
@@ -918,22 +924,56 @@ section {
     left: 12px;
     transform: translateY(-50%);
     
- }
+}
 
-.modal-comment::placeholder{
+.modal-comment{
+    resize: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    appearance: none;
+    background: #FFFFFF;
+    margin-top: 4px;
+    
+     
+    min-height: 40px;
+    padding-left: 42px;
+    box-sizing: border-box;
+    height: 120px;
+}
+
+.modal-textarea{
+    /* appearance:none;
+    resize: none;
+     */
+     padding: 16px;
+
+}
+.modal-comment:focus {
+    outline: none;
+    appearance: none;
+
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+     0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+      border: 1px solid var(--accent-color); 
+
+}
+
+.modal-textarea::placeholder{
     font-family: var(--main-font);
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 14px;
     letter-spacing: 0.01em;
-    
     color: rgba(117, 117, 117, 0.5);
+ 
 }
+ 
 
-.modal-accept-agreement-box{
+.modal-accept-agreement-text{
+    
     margin-top: 10px;
-
     font-family: 'Roboto';
     font-style: normal;
     font-weight:400;
@@ -942,21 +982,63 @@ section {
     letter-spacing: 0.03em;
 
     color: #757575;
+    width: 100%;
+    justify-content: center;
+    
 }
 
-.modal-agreement-link{
+.modal-form-field a {
     color: var(--accent-color);
-    text-decoration: underline;
+    text-decoration: underline
+}
+ 
+.modal-accept-agreement-text span {
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--title-text-color);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}   
+
+.modal-icon-check{
+    fill:transparent;
 }
 
-.modal-form-field:focus .modal-form-icon{
+.modal-accept-agreement:checked
++.modal-accept-agreement-text span{
+background-color: var(--accent-color);
+border: none;
+
+} 
+
+.modal-accept-agreement:checked
++.modal-accept-agreement-text
+.modal-icon-check{
+    fill: var(--primary-white-color);
+ }
+
+
+.wrap-checkbox-submit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.modal-accept-agreement-line {
+    display: flex;
+    flex-direction: row ;
+
+}
+
+.modal-input.about-us  {
+    outline: 1px solid  var(--accent-color);
+    color: var(--accent-color);
     fill: var(--accent-color);
 }
 
-.modal-input:focus,
-.modal-input:hover {
-    border: 1px solid  var(--accent-color);
-}
 .modal-btn-submit {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
@@ -965,13 +1047,8 @@ section {
     background-color: #188CE8;
     color: var(--primary-white-color);
 }
-/*   color of vorder is  funny  */
 
-.wrap-checkbox-submit {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+
 
 .subscription{
    width: 50%;
