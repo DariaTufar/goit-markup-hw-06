@@ -1022,17 +1022,6 @@ border: none;
  }
 
 
-.wrap-checkbox-submit {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.modal-accept-agreement-line {
-    display: flex;
-    flex-direction: row ;
-
-}
-
 .modal-input.about-us  {
     outline: 1px solid  var(--accent-color);
     color: var(--accent-color);
@@ -1051,14 +1040,39 @@ border: none;
 
 
 .subscription{
-   width: 50%;
+   width: calc (50% -15px)
+   padding-top: 72px;
+   padding-bottom: 94px;
+   display: flex;
+   left: calc(50%+15px); 
+   flex-wrap:wrap;
+
+ }
+
+ .wrap-subscription-section{
+    /* flex-direction: column; */
+    /* display: flex; */
 }
+
+.wrap-subscription-form{
+     
+     }
+
+
+ 
+ 
 .subscription-input{
     background-color: transparent;
-    width: 358px;
+    
     min-height: 50px;
-
+    padding-left: 16px;
+    margin-top: 20px;
+    margin-right: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
 }
+
 
 .subscription-btn{
     width: 200px;
@@ -1069,31 +1083,47 @@ border: none;
     border-radius: 4px;
 }
 
-.subscription:placeholder-shown{
+.subscription:placeholder{
     font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 20px;
-/* identical to box height, or 125% */
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+   
+    align-items: center;
+    letter-spacing: 0.03em;
 
-display: flex;
-align-items: center;
-letter-spacing: 0.03em;
-
-color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.6);
 
 }
 
 .subscription-motto {
-    font-family: 'Roboto';
+font-family: 'Roboto';
 font-style: normal;
 font-weight: 700;
 font-size: 14px;
 line-height: 16px;
 letter-spacing: 0.03em;
 text-transform: uppercase;
-
+width: 100%;
 color: #FFFFFF;
+width:100%;
+
+}
+
+.wrap-subscription-btn-icon{
+    position: relative;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.subscription-send-icon {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right:28px;
 
 }
