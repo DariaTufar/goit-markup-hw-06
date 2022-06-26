@@ -568,12 +568,13 @@ section {
 .footer-contacts-join{
     display: flex;
     align-items: baseline;
-    /* position: relative; */
+    justify-content: space-between;
+    
+}
+.footer-contact-wrap{ 
+    margin-right: 70px;
 }
 
-.footer-contact-wrap {
-    margin-right:  70px;
-}
 
 .footer-logo {
     
@@ -665,7 +666,7 @@ section {
 }
 
 .subscription{
-    margin-right: auto;
+    /* margin-right: auto; */
     margin-left: 93px;
 }
 .subscription-form{
@@ -717,7 +718,6 @@ section {
 }
 
 .subscription-motto {
-    display: flex;
     font-family: var(--main-font-family);
     font-style: normal;
     font-weight: 700;
@@ -727,9 +727,6 @@ section {
     text-transform: uppercase;
     margin-bottom: 20px;
     color: var(--primary-white-color);
- 
- 
-
 }
 
 .subscription-send-icon {
@@ -922,6 +919,12 @@ section {
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+.button-clos:focus, 
+.button-close:hover .icon-close-modal{
+    fill: var(--accent-color);
+    cursor: pointer;
+}
+
 .icon-close-modal {
     fill: #000000; 
 }
@@ -980,9 +983,7 @@ section {
 .modal-input:focus{
     outline: none;
     background: #FFFFFF;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
-    0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+   
     border: 1px solid var(--accent-color);
 }
 
@@ -1099,14 +1100,7 @@ section {
     justify-content: center;
     
     
-}
-.span-privacy-icon{
-    /* display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-between; */
-}
+} 
 .privacy-check:focus {
     background-color: var(--accent-color);
     border: none;
@@ -1123,10 +1117,7 @@ border: none;
 +.privacy-check-text 
 .privacy-icon-check{
     fill: var(--primary-white-color);
-    
-    
-    
- }
+}
 
 
 .modal-input.about-us  {
@@ -1137,15 +1128,45 @@ border: none;
 .wrap-btn-submit{
     display: flex;
     justify-content: center;
+    border: none;
 }
 .modal-btn-submit {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     width: 200px;
     height: 50px;
-    background-color: #188CE8;
+    background-color: var(--accent-color); 
     color: var(--primary-white-color);
     justify-content: center;
     align-items: center;
+
+    font-family: var(--main-font-family);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+     
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    
+    color: #FFFFFF;
+    border: none;
+   
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+
+}
+
+.modal-btn-submit:hover,
+.modal-btn-submit:focus,{
+    background-color: #188CE8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    background: #188CE8;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
