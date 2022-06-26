@@ -559,15 +559,16 @@ section {
 
 /* -------------------ФУТЕР---------------------- */
 .footer-main {
-    display: flex;
+     
     padding-bottom: 60px;
     background-color:  #2F303A;
     padding-top: 60px;
 
 }
-.footer-wrap{
+.footer-contacts-join{
     display: flex;
-    align-items: center;
+    align-items: baseline;
+    /* position: relative; */
 }
 
 .footer-contact-wrap {
@@ -662,6 +663,85 @@ section {
 .company-soc-icon{
     fill: var(--primary-white-color);
 }
+
+.subscription{
+    margin-right: auto;
+    margin-left: 93px;
+}
+.subscription-form{
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.subscription-input{
+    background-color: transparent;
+    
+    min-height: 50px;
+    padding-left: 16px;
+    width: 358px;
+    margin-right: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+}
+
+
+.subscription-btn{
+    display: flex;
+    width: 200px;
+    height: 50px;
+    color: var(--primary-white-color);
+    background-color: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.subscription:placeholder{
+    font-family: var(--main-font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+
+    align-items: center;
+    letter-spacing: 0.03em;
+
+    color: rgba(255, 255, 255, 0.6);
+
+
+}
+
+.subscription-motto {
+    display: flex;
+    font-family: var(--main-font-family);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: var(--primary-white-color);
+ 
+ 
+
+}
+
+.subscription-send-icon {
+    width: 24px;
+    height: 24px;
+    margin-left:10px;
+
+}
+
+
+
+
 /* -------------------PAGE2--- - PORTFOLIO-------------- */
 
 .portfolio-filter-list {
@@ -885,6 +965,12 @@ section {
     min-height: 40px;
     padding-left: 42px;
     box-sizing: border-box;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+     0px 2px 1px rgba(0, 0, 0, 0.2),
+     border: 1px solid var(--accent-color) ;
 }
 
 .modal-input:focus + .modal-form-icon{
@@ -894,13 +980,13 @@ section {
     outline: none;
     background: #FFFFFF;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
-     0px 1px 1px rgba(0, 0, 0, 0.14),
-      0px 2px 1px rgba(0, 0, 0, 0.2);
-      border: 1px solid var(--accent-color);
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--accent-color);
 }
 
 .modal-label{
-    font-family: 'Roboto';
+    font-family: var(--main-font-family);
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -933,19 +1019,19 @@ section {
     appearance: none;
     background: #FFFFFF;
     margin-top: 4px;
-    
-     
+
     min-height: 40px;
     padding-left: 42px;
     box-sizing: border-box;
     height: 120px;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), ;
 }
 
 .modal-textarea{
-    /* appearance:none;
     resize: none;
-     */
-     padding: 16px;
+    
+    padding: 16px;
 
 }
 .modal-comment:focus {
@@ -953,9 +1039,9 @@ section {
     appearance: none;
 
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
-     0px 1px 1px rgba(0, 0, 0, 0.14),
-      0px 2px 1px rgba(0, 0, 0, 0.2);
-      border: 1px solid var(--accent-color); 
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--accent-color); 
 
 }
 
@@ -967,14 +1053,14 @@ section {
     line-height: 14px;
     letter-spacing: 0.01em;
     color: rgba(117, 117, 117, 0.5);
- 
-}
- 
 
-.modal-accept-agreement-text{
+}
+
+
+.privacy-check-text{
     
     margin-top: 10px;
-    font-family: 'Roboto';
+    font-family: var(--main-font-family);
     font-style: normal;
     font-weight:400;
     font-size: 14px;
@@ -982,42 +1068,46 @@ section {
     letter-spacing: 0.03em;
 
     color: #757575;
-    width: 100%;
     justify-content: center;
     
 }
 
 .modal-form-field a {
     color: var(--accent-color);
-    text-decoration: underline
+    text-decoration: underline;
 }
- 
-.modal-accept-agreement-text span {
+
+.wrap-privacy{
+    display: flex;
+    flex-direction: column;
+}
+
+.privacy-check-text span {
     width: 16px;
     height: 15px;
     border: 2px solid var(--title-text-color);
     border-radius: 4px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-
 }   
 
-.modal-icon-check{
+.privacy-icon-check{
     fill:transparent;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),;
+}
+.privacy-check:focus {
+    background-color: var(--accent-color);
+    border: none;
 }
 
-.modal-accept-agreement:checked
-+.modal-accept-agreement-text span{
+.privacy-check:checked
++.privacy-check-text span{
 background-color: var(--accent-color);
 border: none;
 
 } 
 
-.modal-accept-agreement:checked
-+.modal-accept-agreement-text
-.modal-icon-check{
+.privacy-check:checked
++.privacy-check-text 
+.privacy-icon-check{
     fill: var(--primary-white-color);
  }
 
@@ -1035,95 +1125,6 @@ border: none;
     height: 50px;
     background-color: #188CE8;
     color: var(--primary-white-color);
-}
-
-
-
-.subscription{
-   width: calc (50% -15px)
-   padding-top: 72px;
-   padding-bottom: 94px;
-   display: flex;
-   left: calc(50%+15px); 
-   flex-wrap:wrap;
-
- }
-
- .wrap-subscription-section{
-    /* flex-direction: column; */
-    /* display: flex; */
-}
-
-.wrap-subscription-form{
-     
-     }
-
-
- 
- 
-.subscription-input{
-    background-color: transparent;
-    
-    min-height: 50px;
-    padding-left: 16px;
-    margin-top: 20px;
-    margin-right: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-    border-radius: 4px;
-}
-
-
-.subscription-btn{
-    width: 200px;
-    height: 50px;
-    color: var(--primary-white-color);
-    background-color: var(--accent-color);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-}
-
-.subscription:placeholder{
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.25;
-   
-    align-items: center;
-    letter-spacing: 0.03em;
-
-    color: rgba(255, 255, 255, 0.6);
-
-}
-
-.subscription-motto {
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 700;
-font-size: 14px;
-line-height: 16px;
-letter-spacing: 0.03em;
-text-transform: uppercase;
-width: 100%;
-color: #FFFFFF;
-width:100%;
-
-}
-
-.wrap-subscription-btn-icon{
-    position: relative;
-    align-items: center;
     justify-content: center;
-
 }
 
-.subscription-send-icon {
-    width: 24px;
-    height: 24px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right:28px;
-
-}

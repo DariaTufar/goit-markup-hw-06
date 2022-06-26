@@ -386,7 +386,7 @@
             <footer class="footer-main">
 
             <div class="container">
-            <div class="footer-wrap">
+            <div class="footer-contacts-join">
                 <div class="footer-contact-wrap">
 
                 <a class="footer-logo" href=".">
@@ -400,8 +400,7 @@
                                 <a class="footer-adress  link"  target="_blank"
                                 href="https://goo.gl/maps/fVVCTX3WFLXZe7AJ9"> 
                                 г. Киев, пр-т Леси Украинки, 26
-                                </a></li>
-
+                                </a></
                             <li class="footer-contact-item" >
                                 <a class="footer-email link"
                                 href = "mailto:info@example.com" >
@@ -448,42 +447,32 @@
                         </li>
                     </ul>
                 </div>
-            </div>
+            
 
-            </div>
-            <div class="container">
 
-                <div class="subscription">
-                    <!-- <div class="wrap-subscription-section"> -->
-                        <h2 class="subscription-motto">Подпишитесь на рассылку</h2>
+            <div class="subscription">
+                    <h2 class="subscription-motto">Подпишитесь на рассылку</h2>
+                    
+                    <form  class="subscription-form">
+                        <input type="email"
+                        name="subscription-email"
+                        id="subscription-email"
+                        minlength="3"
+                        maxlength="100"
+                        class="subscription-input"
+                        placeholder="E-mail">
+                    <button type="submit" class="subscription-btn">
+                        Подписаться
+                        <svg class="subscription-send-icon" width="13" height="13">
+                        <use href="./images/icons.svg#icon-send"> </use> </svg>
+                    </button>
+                            
                         
-                        <!-- <div class="wrap-subscription-form"> -->
-
-                                <form  class="subscription-form">
-                                    <input type="email"
-                                    name="subscription-email"
-                                    id="subscription-email"
-                                    minlength="3"
-                                    maxlength="100"
-                                    class="subscription-input"
-                                    placeholder="E-mail">
-
-                                    <div class="wrap-subscription-btn-icon">
-                                        <button type="submit" class="subscription-btn"> Подписаться</button>
-                                        <!-- <span class="wrap-subscrition-send-icon"> -->
-                                            <svg class="subscription-send-icon" width="13" height="13">
-                                            <use href="./images/icons.svg#icon-send"> </use> </svg>
-                                            <!-- </span> -->
-                                    </div>
-                                </form>
-                        <!-- </div> -->
-                        
-
-                    <!-- </div> -->
-                </div>
-                
+                    </form>
             </div>
-
+             </div>
+            
+            </div>
 
             </footer>
         
@@ -571,28 +560,26 @@
             ></textarea>
         </div>
 
-    <div class="wrap-checkbox-submit">
+    <div class="wrap-privacy">
         
-        <div class="modal-form-field modal-accept-agreement-line">
+        <div class="modal-form-field ">
             <input
             type="checkbox" 
-            name="privacy" 
-            id="privacy"
-            class="modal-accept-agreement  visually-hidden"
+            name="privacy-check" 
+            id="privacy-check"
+            class="privacy-check  visually-hidden"
 
             >
-            <label for="privacy" 
-            class="modal-accept-agreement-text">
-            <span class="modal-span-icon-check">
-                <svg class="modal-icon-check" 
+            <label for="privacy-check" 
+            class="privacy-check-text">
+            <span class="span-privacy-icon">
+                <svg class="privacy-icon-check" 
                 width="16" height="15">
                 <use href="./images/icons.svg#icon-check"> </use>
                 </svg>
-
-
             </span> 
             Соглашаюсь с рассылкой и принимаю&nbsp;
-            <a href="#" class="modal-agreement-link">Условия договора</a>
+            <a href="#" class="privacy-link">Условия договора</a>
             </label>
         </div>
         <button type="submit" class="modal-btn-submit" >Отправить</button>
